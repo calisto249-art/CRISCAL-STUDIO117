@@ -1107,7 +1107,12 @@
     padding: 10px;
     background: #08080a;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+  .project-modal__thumbs::-webkit-scrollbar { display: none; }
   .project-modal__thumb {
     width: 86px;
     height: 58px;
@@ -1394,8 +1399,9 @@
 
     .project-modal {
       padding: 0 !important;
-      align-items: stretch !important;
-      overflow: hidden !important;
+      align-items: flex-start !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
     }
     .project-modal__panel {
       width: 100% !important;
@@ -1403,11 +1409,15 @@
       max-height: none !important;
       grid-template-columns: 1fr !important;
       border: 0 !important;
-      overflow-y: auto;
+      overflow: visible !important;
+      display: flex !important;
+      flex-direction: column !important;
     }
     .project-modal__media {
       height: 44svh;
       min-height: 320px !important;
+      flex: 0 0 auto !important;
+      width: 100% !important;
       flex: 0 0 auto;
     }
     .project-modal__image { object-fit: contain !important; background: #050506; }
