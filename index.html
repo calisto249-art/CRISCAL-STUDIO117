@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -1257,6 +1257,210 @@
     .project-modal__meta-row { flex-direction: column; gap: 5px; }
     .project-modal__meta-row span:last-child { text-align: left; }
     .project-view-hint { opacity: 1; transform: none; right: 18px; bottom: 18px; }
+  }
+
+  /* ====== MOBILE POLISH 2026-06-12 ====== */
+  @media (hover: none), (pointer: coarse), (max-width: 768px) {
+    .cursor,
+    .cursor-ring { display: none !important; }
+    body,
+    a,
+    button,
+    .hamburger,
+    .project-card,
+    .project-modal__thumb,
+    .project-modal__close,
+    .project-modal__actions a,
+    .project-modal__actions button { cursor: auto !important; }
+  }
+
+  @media (max-width: 768px) {
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    nav {
+      padding: 14px max(16px, env(safe-area-inset-right)) 14px max(16px, env(safe-area-inset-left)) !important;
+      background: rgba(10,10,12,0.94);
+      backdrop-filter: blur(14px);
+    }
+    .nav-logo { min-width: 0; }
+    .nav-logo span:first-child { font-size: 17px !important; letter-spacing: 3px !important; }
+    .nav-logo span:last-child { font-size: 8px; letter-spacing: 3px; }
+    .nav-right { gap: 10px; }
+    .hamburger {
+      width: 44px;
+      height: 44px;
+      margin-right: -8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #mobile-menu {
+      padding: max(28px, env(safe-area-inset-top)) 22px max(28px, env(safe-area-inset-bottom));
+      align-items: center;
+    }
+    .mob-close { top: max(18px, env(safe-area-inset-top)); right: 18px; width: 44px; height: 44px; }
+    .mob-logo { margin-bottom: 30px; }
+    .mob-logo span:first-child { font-size: 24px; letter-spacing: 6px; }
+    .mob-links { gap: 0; margin-bottom: 34px; }
+    .mob-links a { font-size: clamp(30px, 10vw, 44px); line-height: 1.12; }
+
+    .hero {
+      height: auto;
+      min-height: 100svh !important;
+      padding: 112px 0 76px;
+      align-items: flex-end;
+    }
+    .hero-content { padding: 0 20px !important; width: 100%; }
+    .hero-tag { margin-bottom: 16px; font-size: 9px; letter-spacing: 3px; }
+    .hero-title {
+      max-width: 100%;
+      font-size: clamp(38px, 13vw, 56px) !important;
+      line-height: 0.92;
+      overflow-wrap: anywhere;
+    }
+    .hero-desc {
+      max-width: 100% !important;
+      margin-bottom: 28px;
+      font-size: 13px !important;
+      line-height: 1.75;
+    }
+    .hero-ctas { width: 100%; align-items: stretch !important; }
+    .hero-ctas .btn-primary,
+    .hero-ctas .link-arrow {
+      width: 100%;
+      min-height: 48px;
+      justify-content: center;
+    }
+    .hero-dots,
+    .hero-nav,
+    .scroll-label { display: none !important; }
+
+    .section-projects { padding: 72px 16px !important; }
+    .projects-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .section-title { font-size: clamp(34px, 12vw, 48px) !important; line-height: 0.95; }
+    .projects-left { position: relative; z-index: 1; }
+    .projects-left .link-arrow { display: inline-flex; margin-top: 4px; }
+    .projects-cards { grid-template-columns: 1fr !important; gap: 10px !important; }
+    .project-card,
+    .projects-cards .project-card:nth-child(4),
+    .projects-cards .project-card:nth-child(5) {
+      grid-column: 1 !important;
+      height: 280px !important;
+      min-height: 280px;
+    }
+    .project-card--featured,
+    .projects-cards .project-card:nth-child(6) {
+      grid-column: 1 !important;
+      height: 380px !important;
+      min-height: 380px;
+      margin-top: 12px !important;
+    }
+    .project-info { padding: 20px !important; transform: none !important; }
+    .project-cat { font-size: 9px; letter-spacing: 2.5px; }
+    .project-name { font-size: 22px !important; line-height: 1; }
+    .project-card--featured .project-name { font-size: 28px !important; }
+    .project-view-hint { opacity: 1 !important; transform: none !important; right: 16px !important; bottom: 16px !important; }
+    .projects-nav { display: none !important; }
+
+    .section-services { grid-template-columns: 1fr !important; }
+    .services-left { padding: 72px 20px !important; }
+    .services-grid { grid-template-columns: 1fr !important; gap: 22px !important; margin-top: 28px !important; }
+    .services-cta .link-arrow { min-height: 48px; }
+    .services-right { height: 360px !important; }
+    .stats-overlay {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      padding: 18px 14px !important;
+      text-align: center;
+    }
+    .stat-num { font-size: 28px !important; }
+    .stat-label { font-size: 8px; letter-spacing: 1.3px; }
+
+    .section-process,
+    .section-testimonios { padding: 72px 16px !important; }
+    .pz-item { gap: 14px !important; margin-bottom: 30px !important; }
+    .pz-num { font-size: 34px !important; min-width: 42px !important; }
+    .pz-title { font-size: 16px !important; }
+    .section-cta { padding: 86px 20px !important; }
+    .cta-title { font-size: clamp(32px, 11vw, 46px) !important; }
+    .btn-gold { width: 100%; max-width: 320px; justify-content: center; }
+    footer { padding-bottom: calc(34px + env(safe-area-inset-bottom)) !important; }
+
+    .project-modal {
+      padding: 0 !important;
+      align-items: stretch !important;
+      overflow: hidden !important;
+    }
+    .project-modal__panel {
+      width: 100% !important;
+      min-height: 100svh;
+      max-height: none !important;
+      grid-template-columns: 1fr !important;
+      border: 0 !important;
+      overflow-y: auto;
+    }
+    .project-modal__media {
+      height: 44svh;
+      min-height: 320px !important;
+      flex: 0 0 auto;
+    }
+    .project-modal__image { object-fit: contain !important; background: #050506; }
+    .project-modal__counter { left: 14px; bottom: 14px; font-size: 10px; padding: 8px 10px; }
+    .project-modal__thumbs { padding: 8px 12px; gap: 8px; }
+    .project-modal__thumb { width: 62px !important; height: 46px !important; }
+    .project-modal__content {
+      padding: 24px 18px 92px !important;
+      overflow: visible !important;
+    }
+    .project-modal__close {
+      position: fixed !important;
+      top: max(12px, env(safe-area-inset-top));
+      right: 12px;
+      width: 44px !important;
+      height: 44px !important;
+      z-index: 10000 !important;
+    }
+    .project-modal__cat { font-size: 10px; letter-spacing: 2.6px; margin-bottom: 12px; }
+    .project-modal__title { font-size: clamp(34px, 11vw, 46px) !important; line-height: 0.96 !important; margin-bottom: 18px; }
+    .project-modal__desc { font-size: 13px !important; line-height: 1.75 !important; margin-bottom: 22px; }
+    .project-modal__meta { padding: 18px 0; margin-bottom: 22px; }
+    .project-modal__meta-row { flex-direction: column !important; gap: 5px !important; }
+    .project-modal__meta-row span:last-child { text-align: left !important; }
+    .project-modal__actions {
+      position: sticky;
+      bottom: 0;
+      margin: 24px -18px -92px;
+      padding: 12px 18px calc(12px + env(safe-area-inset-bottom));
+      background: linear-gradient(to top, rgba(10,10,12,0.98), rgba(10,10,12,0.86));
+    }
+    .project-modal__actions a,
+    .project-modal__actions button { flex: 1 1 100%; min-height: 48px; }
+
+    #mascota-wrap { display: none !important; }
+    .whatsapp-fab {
+      width: 52px !important;
+      height: 52px !important;
+      right: 16px !important;
+      bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+      z-index: 120;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .nav-logo span:first-child { font-size: 15px !important; letter-spacing: 2.5px !important; }
+    .hero-title { font-size: 34px !important; }
+    .project-card,
+    .projects-cards .project-card:nth-child(4),
+    .projects-cards .project-card:nth-child(5) { height: 250px !important; min-height: 250px; }
+    .project-card--featured,
+    .projects-cards .project-card:nth-child(6) { height: 330px !important; min-height: 330px; }
+    .project-modal__media { height: 40svh; min-height: 270px !important; }
   }
 </style>
 </head>
